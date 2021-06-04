@@ -23,7 +23,7 @@ try{
 
         
         stage('Build, Test and Package'){
-            echo "Building the addressbook application..."
+            echo "Building the bootcamp application..."
             sh "${mavenCMD} clean package"
         }
         
@@ -59,7 +59,7 @@ try{
         }
         
         stage('Build Docker Image'){
-            echo "Building docker image for addressbook application ..."
+            echo "Building docker image for bootcamp application ..."
             sh "${dockerCMD} build -t mrasto/batch-10:${tagName} ."
         }
         
